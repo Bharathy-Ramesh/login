@@ -7,9 +7,14 @@ import { FormControl, FormArray, FormGroup} from '@angular/forms'
   styleUrls: ['./signin.component.scss']
 })
 export class SigninComponent implements OnInit {
-
-  constructor() { }
-
+  userForm:FormGroup;
+  hide:boolean = true;
+  constructor() {
+    this.userForm = new FormGroup({
+      'username': new FormControl(),
+      'password': new FormControl()
+    });
+   }
   ngOnInit(): void {
   }
 
