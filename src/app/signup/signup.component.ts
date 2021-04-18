@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormControl, FormArray, FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  signform:FormGroup;
+  hide:boolean = true;
+  constructor() {
+    this.signform = new FormGroup({
+      'name': new FormControl(),
+      'password': new FormControl()
+    });
+   }
 
   ngOnInit(): void {
   }
