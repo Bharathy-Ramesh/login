@@ -23,5 +23,8 @@ export class SigninComponent implements OnInit {
   showDetails(){    
     this.router.navigate(['/signup']);  
   }; 
+  Login(logindet:any){
+    console.log(logindet);
+  }
 
 }

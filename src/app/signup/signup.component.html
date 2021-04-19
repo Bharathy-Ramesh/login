@@ -3,7 +3,7 @@
         <div class="form-group">
             <mat-form-field appearance="fill">
                 <mat-label>Name</mat-label>
-                <input matInput formControlName ="name">
+                <input matInput formControlName ="name" required>
               </mat-form-field>
         </div>
         <div class="example-container">
@@ -16,7 +16,7 @@
         <div class="example-container">
             <mat-form-field appearance="fill">
               <mat-label>Enter your password</mat-label>
-              <input matInput [type]="hide ? 'password' : 'text'" formControlName ="password">
+              <input matInput [type]="hide ? 'password' : 'text'" formControlName ="password" required>
               <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button> -->
@@ -25,7 +25,7 @@
         <div class="example-container">
             <mat-form-field appearance="fill">
               <mat-label>Confirm password</mat-label>
-              <input matInput type ="password" formControlName ="cpassword">
+              <input matInput type ="password" formControlName ="cpassword" required>
               <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button> -->
