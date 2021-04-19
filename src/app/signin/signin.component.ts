@@ -17,12 +17,6 @@ export class SigninComponent implements OnInit {
       'username': new FormControl(),
       'password': new FormControl()
     });
-    this.http.get('http://localhost/phpmyadmin/tbl_sql.php?db=mysql&table=customer').subscribe(data => {
-    this.data.push(data);
-    console.log(this.data);
-   
-    
-    }, error => console.error(error));
    }
   ngOnInit(): void {
   }
