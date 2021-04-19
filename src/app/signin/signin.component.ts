@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormArray, FormGroup} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -9,7 +10,7 @@ import { FormControl, FormArray, FormGroup} from '@angular/forms';
 export class SigninComponent implements OnInit {
   userForm:FormGroup;
   hide:boolean = true;
-  constructor() {
+  constructor(private router:Router) {
     this.userForm = new FormGroup({
       'username': new FormControl(),
       'password': new FormControl()
@@ -17,5 +18,8 @@ export class SigninComponent implements OnInit {
    }
   ngOnInit(): void {
   }
+  showDetails(){    
+    this.router.navigate(['/signup']);  
+  }; 
 
 }
